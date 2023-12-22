@@ -4,7 +4,10 @@ import asyncio
 from random import randint
 from time import sleep
 import json
+from flask import Flask, jsonify, request
+import awsgi
 
+app = Flask(__name__)
 # def lambda_handler(event, context):
 #     url_app0 = 'http://18.227.21.205:8012/jobs/1'
 #     url_app1 = 'http://18.191.72.159:5001/userinfo/total_count'
@@ -58,7 +61,11 @@ async def run_async():
     }
 
     return aggregated_data
+    
+@app.route('/')
+def index():
+    return jsonify(status=200, message='OK')
+
             
 def lambda_handler(event, context):
-
-    return asyncio.get_event_loop().run_until_complete(run_async())
+    return awsgi.response(app, event, context, base64_content_types={"image/png"})
