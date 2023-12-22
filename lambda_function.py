@@ -61,4 +61,4 @@ async def run_async():
             
 def lambda_handler(event, context):
 
-    return asyncio.get_event_loop().run_until_complete(run_async())
+    return "hello"
