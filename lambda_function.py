@@ -66,7 +66,7 @@ def index():
     return jsonify({"message":"Hello World"}),200
 
 @app.route('/total_count')
-def index():
+def total_count():
     return jsonify(asyncio.get_event_loop().run_until_complete(run_async())),200
 
             
