@@ -61,10 +61,13 @@ async def run_async():
     }
 
     return aggregated_data
-    
-@app.route('/')
+@app.route('/total_count')
 def index():
-    return asyncio.get_event_loop().run_until_complete(run_async()),200
+    return jsonify({"message":"Hello World"}),200
+
+@app.route('/total_count')
+def index():
+    return jsonify(asyncio.get_event_loop().run_until_complete(run_async())),200
 
             
 def lambda_handler(event, context):
