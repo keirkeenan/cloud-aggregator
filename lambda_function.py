@@ -61,11 +61,11 @@ async def run_async():
     }
 
     return aggregated_data
-@app.route('/')
+@app.route('/composite')
 def index():
     return jsonify({"message":"Hello World"}),200
 
-@app.route('/total_count')
+@app.route('/composite/total_count')
 def total_count():
     return jsonify(asyncio.get_event_loop().run_until_complete(run_async())),200
 
