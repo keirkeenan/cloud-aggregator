@@ -42,22 +42,22 @@ async def fetch_data(url):
             
 async def run_async():
     url_app0 = 'http://18.223.237.70:8012/jobs/1'
-    #url_app1 = 'http://18.226.185.252:5001/userinfo/total_count'
+    url_app1 = 'http://18.226.185.252:5001/userinfo/total_count'
     url_app2 = 'http://18.223.237.70:8012/jobs/total_count'
-    #url_app3 = 'https://application-microservice.uc.r.appspot.com/application/total_count'
+    url_app3 = 'https://application-microservice.uc.r.appspot.com/application/total_count'
 
     # Use asyncio.gather to asynchronously fetch data from multiple endpoints
     data_app0, data_app1, data_app2, data_app3 = await asyncio.gather(
         fetch_data(url_app0),
-        #fetch_data(url_app1),
+        fetch_data(url_app1),
         fetch_data(url_app2),
-        #fetch_data(url_app3)
+        fetch_data(url_app3)
     )
     aggregated_data = {
         "app0": data_app0,
-        #"app1": data_app1,
+        "app1": data_app1,
         "app2": data_app2,
-        #"app3": data_app3
+        "app3": data_app3
     }
 
     return aggregated_data
