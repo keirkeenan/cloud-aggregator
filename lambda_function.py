@@ -38,7 +38,7 @@ async def fetch_data(url):
             return await response.json()
             
 async def run_async():
-    url_app0 = 'http://18.227.21.205:8012/jobs/3'
+    url_app0 = 'http://18.227.21.205:8012/jobs/10'
     url_app1 = 'http://18.191.72.159:5001/userinfo/total_count'
     url_app2 = 'http://18.227.21.205:8012/jobs/total_count'
     url_app3 = 'https://application-microservice.uc.r.appspot.com/application/total_count'
