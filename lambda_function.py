@@ -60,7 +60,7 @@ async def run_async():
     return aggregated_data
 @app.route('/composite')
 def index():
-    return jsonify({"message":"Hello World"}),200
+    return jsonify({"message":"Hello World2"}),200
 
 @app.route('/composite/total_count')
 def total_count():
