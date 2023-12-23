@@ -1,6 +1,9 @@
-# Statistics Microservice
+## 6156-project-userinfo-flask
+
+### This is the compositie satistics microservice, which fufills task 3.
+
 ## Overview
-The Statistics Microservice is an aggregated or composite service that simplifies interactions with the job portal's underlying microservices. It provides endpoints for retrieving counts of jobs, users, and applications, adding new recruiters and jobs, and fetching all jobs and applications associated with a specific recruiter. This service streamlines the process of accessing and managing key statistics and functionalities within the job portal ecosystem.
+The Statistics Microservice is an aggregated or composite service that simplifies interactions with the jobland's underlying microservices. It provides endpoints for retrieving counts of jobs, users, and applications, adding new recruiters and jobs, and fetching all jobs and applications associated with a specific recruiter. This service streamlines the process of accessing and managing key statistics and functionalities within the job portal ecosystem.
 
 ## Features
 - Get Total Counts (GET /composite/total_count)
