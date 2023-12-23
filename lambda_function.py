@@ -88,7 +88,7 @@ def add_jobs():
     email=request_data['recruiterEmail']
     picture_url=request_data['picture_url']
     request_app2={'name':name,'email':email,'picture_url':picture_url}
-    user:requests.post(url_app2,json=request_app2)
+    user=requests.post(url_app2,json=request_app2)
     user=user.get_json()
 
     return jsonify({"recruiterID":user,"jobID":job}),200
